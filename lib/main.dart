@@ -5,11 +5,11 @@ import 'package:gierkownia/tictactoe.dart';
 import 'package:gierkownia/Szachy_screen.dart';
 
 void main() {
-  runApp(const Glowna());
+  runApp(const Main());
 }
 
-class Glowna extends StatelessWidget {
-  const Glowna({Key? key}) : super(key: key);
+class Main extends StatelessWidget {
+  const Main({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
