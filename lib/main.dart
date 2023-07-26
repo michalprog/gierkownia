@@ -18,7 +18,7 @@ class Glowna extends StatelessWidget {
       home: Scaffold(
           backgroundColor: Colors.yellowAccent,
           appBar: AppBar(
-            title: Center(child: Text("gierkownia")),
+            title: const Center(child: Text("gierkownia")),
           ),
           body: Center(
               child: Column(
@@ -28,16 +28,22 @@ class Glowna extends StatelessWidget {
                   ),
                   Container(
                     width: 300,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Gra33()),
+                        );
+
+                      },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Gra 33",
                         style: TextStyle(fontSize: 18),
                       ),
@@ -45,21 +51,16 @@ class Glowna extends StatelessWidget {
                   ),
                   Container(
                     width: 300,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Gra33()),
-                        );
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "kólko i krzyżyk",
                         style: TextStyle(fontSize: 18),
                       ),
@@ -67,16 +68,16 @@ class Glowna extends StatelessWidget {
                   ),
                   Container(
                     width: 300,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "warcaby",
                         style: TextStyle(fontSize: 18),
                       ),
@@ -84,16 +85,16 @@ class Glowna extends StatelessWidget {
                   ),
                   Container(
                     width: 300,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Szachy",
                         style: TextStyle(fontSize: 18),
                       ),
@@ -102,7 +103,7 @@ class Glowna extends StatelessWidget {
                   const SizedBox(
                     height: 80,
                   ),
-                  Center(
+                  const Center(
                       child: Text("twórca: Michał Chojnacki",
                           style: TextStyle(
                               fontSize: 20,
