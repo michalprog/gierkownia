@@ -14,7 +14,21 @@ class Glowna extends StatefulWidget {
 class _GlownaState extends State<Glowna> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: ("gierkownia"),
+      home: Scaffold(
+          appBar: AppBar(
+        title: Center(child: Text("gierkownia")),
+      ),
+      body: Center(
+          child:Column(
+            children: [
+
+            ],
+
+      )
+      )
+    ),
+    );
   }
 }
-
