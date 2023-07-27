@@ -5,6 +5,20 @@ class Gra33 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child:Text("Gra 33")),
+      ),
+      bottomNavigationBar:Row
+        (
+        children: [
+          Expanded(child:ElevatedButton(onPressed: (){}, child: Text("+1",style: TextStyle(fontSize: 20))),),
+          Expanded(child:ElevatedButton(onPressed: (){}, child: Text("+2",style: TextStyle(fontSize: 20))),),
+          Expanded(child:ElevatedButton(onPressed: (){}, child: Text("+3",style: TextStyle(fontSize: 20))),),
+        ],
+      ),
+
+      
+    );
   }
 }
