@@ -72,6 +72,7 @@ class _Start_33State extends State<Start_33> {
           width: 300,
           padding: const EdgeInsets.all(5),
         child:TextFormField(
+          decoration: const InputDecoration(labelText: 'podaj liczbę z zakresu 33-100'),
           initialValue: '33',
           keyboardType: TextInputType.number,
           inputFormatters: [

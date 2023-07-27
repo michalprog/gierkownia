@@ -7,10 +7,15 @@ bool is_started=false;
   {
 
   }
-void Start(int typ_gry,int numer)
+void Start(int typGry,int numer)
 {
-  this.typ_gry=typ_gry;
+  this.typ_gry=typGry;
+  if (numer>33)
+  {
   this.liczba_finalna=numer;
+  }else{
+  this.liczba_finalna=33;
+  }
   is_started=true;
 }
 void koniec(){
