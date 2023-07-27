@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gierkownia/33_start.dart';
+import 'package:gierkownia/33_gra.dart';
+import 'package:gierkownia/33_klasa.dart';
 
 class Gra33 extends StatelessWidget {
   const Gra33({Key? key}) : super(key: key);
@@ -9,6 +12,7 @@ class Gra33 extends StatelessWidget {
       appBar: AppBar(
         title: const Center(child:Text("Gra 33")),
       ),
+      body:Start_33(),
       bottomNavigationBar:Row
         (
         children: [
