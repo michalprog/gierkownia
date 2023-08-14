@@ -6,7 +6,9 @@ int liczba_koncowa=0;
 int liczba_aktualna=0;
 
 
-Bot_33(int koncowa,int typ){
+void wprowadz_dane(int koncowa,int typ){
+  this.liczba_koncowa=koncowa;
+  this.typ=typ;
 
 }
 int Ruch(int aktualna) {
