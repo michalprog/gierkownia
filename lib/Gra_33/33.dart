@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gierkownia/33_start.dart';
-import 'package:gierkownia/33_gra.dart';
-import 'package:gierkownia/33_klasa.dart';
+
+import 'package:gierkownia/Gra_33/33_start.dart';
+import 'package:gierkownia/Gra_33/33_gra.dart';
+import 'package:gierkownia/Gra_33/33_klasa.dart';
 
 class Gra33 extends StatelessWidget {
   const Gra33({Key? key}) : super(key: key);

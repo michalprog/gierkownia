@@ -8,8 +8,10 @@ int odpowiedz=0;
 Bot_33(int koncowa,int typ){
 
 }
-void wprowadz_dane(){
+int Ruch(int aktualna){
+
 
 }
+
 
 }

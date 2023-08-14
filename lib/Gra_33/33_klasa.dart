@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
 
 class Klasa33 {
-  int typ_gry = 0;
-  int liczba_finalna = 33;
-  int liczba_aktualna = 0;
+  int game_type = 0; //0-gra pomiedzy graczami 1-bot łatwy 2-bot trudny
+  int Final_Number = 33; //final
+  int Actual_Number = 0;
   bool is_started = false;
   Klasa33() {}
   void Start(int typGry, int numer) {
     if (numer > 33) {
-      this.liczba_finalna = numer;
+      this.Final_Number = numer;
     } else {
-      this.liczba_finalna = 33;
+      this.Final_Number = 33;
     }
-    this.typ_gry = typGry;
+    this.game_type = typGry;
     is_started = true;
   }
 
   void koniec() {
-    typ_gry = 0;
-    liczba_aktualna = 0;
+    game_type = 0;
+    Actual_Number = 0;
     is_started = false;
   }
 
   void ruch_gracza(int num) {
-    if (typ_gry == 0) {
-    } else if (typ_gry == 1) {
-    } else if (typ_gry == 2) {}
+    if (game_type == 0) {
+    } else if (game_type == 1 ||game_type == 2) {
+
+    }
   }
 
   int wyswietl_liczbe() {
-    return liczba_aktualna;
+    return Actual_Number;
   }
 }

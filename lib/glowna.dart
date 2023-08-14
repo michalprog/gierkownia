@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gierkownia/33.dart';
-import 'package:gierkownia/Warcaby_Screen.dart';
-import 'package:gierkownia/tictactoe.dart';
-import 'package:gierkownia/Szachy_screen.dart';
+import 'package:gierkownia/Gra_33/33.dart';
+import 'package:gierkownia/warcaby/Warcaby_Screen.dart';
+import 'package:gierkownia/tictactoe/tictactoe.dart';
+import 'package:gierkownia/szachy/Szachy_screen.dart';
 
 
 
