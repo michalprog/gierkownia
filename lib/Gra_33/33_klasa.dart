@@ -23,9 +23,14 @@ class Klasa33 {
   }
 
   void ruch_gracza(int num) {
-    if (game_type == 0) {
-    } else if (game_type == 1 ||game_type == 2) {
+    if (Actual_Number+num>Final_Number){
 
+    }else if(Actual_Number+num==Final_Number){
+
+    }else {
+      if (game_type == 0) {} else if (game_type == 1 || game_type == 2) {
+
+      }
     }
   }
 
