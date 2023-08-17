@@ -11,6 +11,13 @@ class Start_33 extends StatefulWidget {
 }
 
 class _Start_33State extends State<Start_33> {
+  TextEditingController gameendnumber = TextEditingController();
+  @override
+  void dispose() {
+    gameendnumber.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center (child:Column(

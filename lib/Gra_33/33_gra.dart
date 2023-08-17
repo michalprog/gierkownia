@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 class Screen_gra extends StatefulWidget {
   final VoidCallback switchScreen;
-  const Screen_gra({Key? key,required this.switchScreen}) : super(key: key);
+  final int liczbakoncowa,typgry;
+  const Screen_gra({Key? key,required this.switchScreen,required this.liczbakoncowa,required this.typgry}) : super(key: key);
 
   @override
   State<Screen_gra> createState() => _Screen_graState();

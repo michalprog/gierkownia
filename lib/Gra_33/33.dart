@@ -16,18 +16,18 @@ class _Gra33State extends State<Gra33> {
   @override
   void initState() {
     super.initState();
-    glowny = Start_33(switchScreen: switchScreen);
+    glowny = Start_33(
+      switchScreen: () => switchScreen(0, 0),
+    );
   }
 
-  void switchScreen() {
-    setState(() {
-      if (glowny is Start_33) {
-        glowny = Screen_gra(switchScreen: switchScreen);
-      } else {
-        glowny = Start_33(switchScreen: switchScreen);
-      }
-    });
+  void switchScreen_2() {
 
+  }
+  void switchScreen(int type, int number) {
+    setState(() {
+      glowny = Screen_gra(switchScreen: switchScreen_2, liczbakoncowa: number, typgry: type,);
+    });
   }
 
 
