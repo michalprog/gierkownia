@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Start_33 extends StatefulWidget {
-  final Function switchScreen;
+  final VoidCallback switchScreen;
   const Start_33({Key? key,required this.switchScreen}) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class _Start_33State extends State<Start_33> {
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed:  widget.switchScreen,
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(
@@ -39,7 +39,7 @@ class _Start_33State extends State<Start_33> {
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed:  widget.switchScreen,
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(
@@ -56,7 +56,7 @@ class _Start_33State extends State<Start_33> {
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed:  widget.switchScreen,
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(

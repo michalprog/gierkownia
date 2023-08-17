@@ -12,13 +12,22 @@ class Gra33 extends StatefulWidget {
 }
 
 class _Gra33State extends State<Gra33> {
-  Widget glowny = Start_33();
+  late Widget glowny ;
+  @override
+  void initState() {
+    super.initState();
+    glowny = Start_33(switchScreen: switchScreen);
+  }
+
   void switchScreen() {
-    if (glowny is Start_33) {
-      glowny = Screen_gra(switchScreen: switchScreen);
-    } else {
-      glowny = Start_33(switchScreen: switchScreen);
-    }
+    setState(() {
+      if (glowny is Start_33) {
+        glowny = Screen_gra(switchScreen: switchScreen);
+      } else {
+        glowny = Start_33(switchScreen: switchScreen);
+      }
+    });
+
   }
 
 
