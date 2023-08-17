@@ -4,19 +4,26 @@ import 'package:flutter/services.dart';
 
 class Start_33 extends StatefulWidget {
   final VoidCallback switchScreen;
-  const Start_33({Key? key,required this.switchScreen}) : super(key: key);
+  const Start_33({Key? key,required this.switchScreen()}) : super(key: key);
 
   @override
   State<Start_33> createState() => _Start_33State();
 }
 
 class _Start_33State extends State<Start_33> {
-  TextEditingController gameendnumber = TextEditingController();
+  TextEditingController gameNumber = TextEditingController();
   @override
   void dispose() {
-    gameendnumber.dispose();
+    gameNumber.dispose();
     super.dispose();
   }
+  void zmien_okno(int type){
+    //int liczba=int.parse(gameNumber as String);
+int liczba=gameNumber as int;
+widget.switchScreen(type,liczba);
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -93,4 +100,6 @@ class _Start_33State extends State<Start_33> {
     ),
     );
   }
+
+
 }
