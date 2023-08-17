@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Start_33 extends StatefulWidget {
-  const Start_33({Key? key}) : super(key: key);
+  final Function switchScreen;
+  const Start_33({Key? key,required this.switchScreen}) : super(key: key);
 
   @override
   State<Start_33> createState() => _Start_33State();

@@ -7,7 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gierkownia/33.dart';
+
+import 'package:gierkownia/Gra_33/33.dart';
 
 import 'package:gierkownia/main.dart';
 
