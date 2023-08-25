@@ -5,6 +5,7 @@ class Screen_gra extends StatefulWidget {
   Klasa33 gra33=new Klasa33();
   final VoidCallback switchScreen;
   final int liczbakoncowa, typgry;
+  List<String> tpGry =["1 vs 1","bot(łatwy)","bot trudny"];
    Screen_gra(
       {Key? key,
       required this.switchScreen,
@@ -17,6 +18,8 @@ class Screen_gra extends StatefulWidget {
 }
 
 class _Screen_graState extends State<Screen_gra> {
+
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -24,7 +27,8 @@ class _Screen_graState extends State<Screen_gra> {
       Container(
         height:100 ,
           width: 200,
-          child: Text("gra z graczem")),
+          child: Text(widget.tpGry[widget.typgry]),
+      ),
           const SizedBox(
             height: 80,
           ),

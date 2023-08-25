@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Start_33 extends StatefulWidget {
-  final VoidCallback switchScreen;
-  const Start_33({Key? key,required this.switchScreen()}) : super(key: key);
+  final void Function(int,int) switchScreen;
+  const Start_33({Key? key,required this.switchScreen}) : super(key: key);
 
   @override
   State<Start_33> createState() => _Start_33State();
@@ -18,10 +18,8 @@ class _Start_33State extends State<Start_33> {
     super.dispose();
   }
   void zmien_okno(int type){
-    //int liczba=int.parse(gameNumber as String);
-int liczba=gameNumber as int;
-widget.switchScreen();
-
+    int liczba=int.parse(gameNumber as String);
+    widget.switchScreen(type,liczba);
   }
 
 
@@ -36,7 +34,7 @@ widget.switchScreen();
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed:  widget.switchScreen,
+            onPressed:  ()=>zmien_okno(0),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(
@@ -53,7 +51,7 @@ widget.switchScreen();
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed:  widget.switchScreen,
+            onPressed:  ()=>zmien_okno(1),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(
@@ -70,7 +68,7 @@ widget.switchScreen();
           width: 300,
           padding: const EdgeInsets.all(5),
           child: ElevatedButton(
-            onPressed:  widget.switchScreen,
+            onPressed:  ()=>zmien_okno(2),
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               shape: RoundedRectangleBorder(
