@@ -20,7 +20,7 @@ class _Start_33State extends State<Start_33> {
   void zmien_okno(int type){
     //int liczba=int.parse(gameNumber as String);
 int liczba=gameNumber as int;
-widget.switchScreen(type,liczba);
+widget.switchScreen();
 
   }
 
