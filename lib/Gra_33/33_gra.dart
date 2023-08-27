@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gierkownia/Gra_33/33_klasa.dart';
 
 class Screen_gra extends StatefulWidget {
-  Klasa33 gra33=new Klasa33();
+  Klasa33 gra33 = new Klasa33();
   final VoidCallback switchScreen;
   final int liczbakoncowa, typgry;
-  List<String> tpGry =["1 vs 1","bot(łatwy)","bot trudny"];
-   Screen_gra(
+  List<String> tpGry = ["1 vs 1", "bot(łatwy)", "bot trudny"];
+  Screen_gra(
       {Key? key,
       required this.switchScreen,
       required this.liczbakoncowa,
@@ -18,20 +18,21 @@ class Screen_gra extends StatefulWidget {
 }
 
 class _Screen_graState extends State<Screen_gra> {
-
-
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Column(children: [
       Container(
-        height:100 ,
-          width: 200,
-          child: Text(widget.tpGry[widget.typgry]),
+        height: 100,
+        width: 200,
+        color: Colors.yellowAccent,
+        alignment: Alignment.center,
+        child:
+            Text(widget.tpGry[widget.typgry], style: TextStyle(fontSize: 24)),
       ),
-          const SizedBox(
-            height: 80,
-          ),
+      const SizedBox(
+        height: 80,
+      ),
     ]));
   }
 }

@@ -18,7 +18,10 @@ class _Start_33State extends State<Start_33> {
     super.dispose();
   }
   void zmien_okno(int type){
-    int liczba=int.parse(gameNumber as String);
+    //int liczba=int.parse(gameNumber.text);
+    int liczba = int.parse(gameNumber.text) ;
+    print(gameNumber.text);
+    print (liczba);
     widget.switchScreen(type,liczba);
   }
 
@@ -86,6 +89,7 @@ class _Start_33State extends State<Start_33> {
           padding: const EdgeInsets.all(5),
         child:TextFormField(
           decoration: const InputDecoration(labelText: 'podaj liczbę z zakresu 33-100'),
+          //controller: gameNumber,
           initialValue: '33',
           keyboardType: TextInputType.number,
           inputFormatters: [
