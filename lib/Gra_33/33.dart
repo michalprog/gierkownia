@@ -19,7 +19,6 @@ class _Gra33State extends State<Gra33> {
       switchScreen: switchScreen,
     );
   }
-
   void switchScreen_2() {}
   void switchScreen(int type, int number) {
     setState(() {
@@ -38,25 +37,7 @@ class _Gra33State extends State<Gra33> {
         title: const Center(child: Text("Gra 33")),
       ),
       body: glowny,
-      bottomNavigationBar: Row(
-        children: [
-          Expanded(
-            child: ElevatedButton(
-                onPressed: () {},
-                child: Text("+1", style: TextStyle(fontSize: 20))),
-          ),
-          Expanded(
-            child: ElevatedButton(
-                onPressed: () {},
-                child: Text("+2", style: TextStyle(fontSize: 20))),
-          ),
-          Expanded(
-            child: ElevatedButton(
-                onPressed: () {},
-                child: Text("+3", style: TextStyle(fontSize: 20))),
-          ),
-        ],
-      ),
+
     );
   }
 }
