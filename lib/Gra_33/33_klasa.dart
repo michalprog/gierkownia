@@ -7,8 +7,12 @@ class Klasa33 {
   int Actual_Number = 0;
   bool is_started = false;
   Bot_33 bot=new Bot_33();
-  Klasa33() {}
-  void Start(int typGry, int numer) {
+
+  Klasa33(int typGry, int numer)
+  {
+    start(typGry,numer);
+  }
+  void start(int typGry, int numer) {
     if (numer > 33) {
       this.Final_Number = numer;
     } else {

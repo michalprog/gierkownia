@@ -18,11 +18,12 @@ class _Start_33State extends State<Start_33> {
     super.dispose();
   }
   void zmien_okno(int type){
-    //int liczba=int.parse(gameNumber.text);
-    int liczba = int.parse(gameNumber.text) ;
-    print(gameNumber.text);
-    print (liczba);
-    widget.switchScreen(type,liczba);
+    setState(() {
+      int liczba = int.tryParse(gameNumber.text) ?? 33;
+      print (liczba);
+      widget.switchScreen(type,liczba);
+    });
+
   }
 
 
