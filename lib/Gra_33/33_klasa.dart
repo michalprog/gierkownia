@@ -29,6 +29,7 @@ class Klasa33 {
     }
     this.game_type = typGry;
     is_started = true;
+    bot.typ=typGry;
   }
 
   void koniec() {
@@ -43,8 +44,8 @@ class Klasa33 {
     } else if (Actual_Number + num == Final_Number) {
       Actual_Number = bot.Ruch(num);
     } else {
+      Actual_Number = bot.Ruch(num);
       if (game_type == 0) {
-        Actual_Number = bot.Ruch(num);
         if(gmt==0){
           gmt=3;
         }else{
@@ -52,9 +53,12 @@ class Klasa33 {
         }
       } else if (game_type == 1 || game_type == 2) {
         Actual_Number = bot.Ruch(num);
+
       }
     }
-    if (Actual_Number == Final_Number) {}
+    if (Actual_Number == Final_Number) {
+
+    }
   }
 
   int wyswietl_liczbe() {
