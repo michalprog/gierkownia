@@ -12,20 +12,24 @@ void wprowadz_dane(int koncowa,int typ){
 
 }
 int Ruch(int aktualna) {
-  liczba_aktualna = aktualna;
-  if (liczba_koncowa <= liczba_aktualna + 4) {
-    if (liczba_koncowa == liczba_aktualna + 1) {
-      return liczba_koncowa;
-    } else {
-      return liczba_koncowa - 1;
-    }
-  } else {
-    if (typ == 1) {
-      bot_latwy();
-    } else if (typ == 2) {
-      bot_trudny();
+  liczba_aktualna += aktualna;
+  if (typ!=0) {
 
+    if (liczba_koncowa <= liczba_aktualna + 4) {
+      if (liczba_koncowa == liczba_aktualna + 1) {
+        return liczba_koncowa;
+      } else {
+        return liczba_koncowa - 1;
+      }
+    } else {
+      if (typ == 1) {
+        bot_latwy();
+      } else if (typ == 2) {
+        bot_trudny();
+      }
+      return liczba_aktualna;
     }
+  }else{
     return liczba_aktualna;
   }
 }

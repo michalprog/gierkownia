@@ -5,7 +5,6 @@ class Screen_gra extends StatefulWidget {
   final Klasa33 gra33;
   final VoidCallback switchScreen;
   final int liczbakoncowa, typgry;
-  List<String> tpGry = ["1 vs 1", "bot(łatwy)", "bot trudny"];
   Screen_gra({
     Key? key,
     required this.switchScreen,
@@ -16,9 +15,16 @@ class Screen_gra extends StatefulWidget {
 
   @override
   State<Screen_gra> createState() => _Screen_graState();
+
 }
 
 class _Screen_graState extends State<Screen_gra> {
+  void ruch(int liczba){
+    setState(() {
+      widget.gra33.ruch_gracza(liczba);
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,7 +35,7 @@ class _Screen_graState extends State<Screen_gra> {
         color: Colors.yellowAccent,
         alignment: Alignment.center,
         child:
-            Text(widget.tpGry[widget.typgry], style: TextStyle(fontSize: 24)),
+            Text(widget.gra33.tpGry[widget.gra33.gmt], style: TextStyle(fontSize: 24)),
       ),
       const SizedBox(
         height: 120,
@@ -51,17 +57,17 @@ class _Screen_graState extends State<Screen_gra> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {ruch(1);},
                       child: const Text("+1", style: TextStyle(fontSize: 20))),
                 ),
                 Expanded(
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {ruch(2);},
                       child: const Text("+2", style: TextStyle(fontSize: 20))),
                 ),
                 Expanded(
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {ruch(3);},
                       child: const Text("+3", style: TextStyle(fontSize: 20))),
                 ),
               ],
