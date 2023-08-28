@@ -56,6 +56,10 @@ int Ruch(int aktualna) {
   }
 
   }
+  void endgame(){
+
+
+  }
 
 
   void reset(){

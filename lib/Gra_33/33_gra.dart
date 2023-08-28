@@ -22,6 +22,27 @@ class _Screen_graState extends State<Screen_gra> {
   void ruch(int liczba){
     setState(() {
       widget.gra33.ruch_gracza(liczba);
+      if (widget.liczbakoncowa==widget.gra33.Actual_Number){
+       widget.gra33.koniec();
+       showDialog(
+         context: context,
+         builder: (BuildContext context) {
+           return AlertDialog(
+             title: Text("Koniec gry"),
+             content: Text(widget.gra33.wynik_okienko()),
+             actions: [
+               TextButton(
+                 onPressed: () {
+                   Navigator.pop(context); // Zamknięcie dialogu
+                   widget.switchScreen(); // Przejście do innej strony/ekranu
+                 },
+                 child: Text("Zamknij"),
+               ),
+             ],
+           );
+         },
+       );
+      }
     });
 
   }
