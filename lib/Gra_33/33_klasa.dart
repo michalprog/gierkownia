@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gierkownia/Gra_33/bot_33.dart';
+import 'dart:math';
 
 class Klasa33 {
   int game_type = 0; //0-gra pomiedzy graczami 1-bot łatwy 2-bot trudny
@@ -21,6 +22,7 @@ class Klasa33 {
     start(typGry, numer);
   }
   void start(int typGry, int numer) {
+    poprawka();
     gmt = typGry;
     if (numer > 33) {
       this.Final_Number = numer;
@@ -29,13 +31,13 @@ class Klasa33 {
     }
     this.game_type = typGry;
     is_started = true;
-    bot.wprowadz_dane(Final_Number, game_type);
+    bot.wprowadz_dane(Final_Number, game_type,Actual_Number);
   }
 
   void koniec() {
-    Actual_Number = 0;
+     poprawka();
     is_started = false;
-    bot.reset();
+    bot.reset(Actual_Number);
     gmt=game_type;
   }
 
@@ -94,5 +96,12 @@ class Klasa33 {
 
     }
     return odpowiedz;
+  }
+  void poprawka() {//ma za zadanie zweryfikować czy gre da sie wygrać jesli nie to zmienic
+    if (((Final_Number - 1) % 4) == 0) {
+      Actual_Number = 1;
+    }else{
+      Actual_Number=0;
+    }
   }
 }

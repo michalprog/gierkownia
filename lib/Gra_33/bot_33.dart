@@ -6,7 +6,8 @@ class Bot_33{
   int liczba_aktualna=0;
 
 
-  void wprowadz_dane(int koncowa,int typ){
+  void wprowadz_dane(int koncowa,int typ,int aktualna){
+    this.liczba_aktualna=aktualna;
     this.liczba_koncowa=koncowa;
     this.typ=typ;
 
@@ -80,8 +81,8 @@ class Bot_33{
 
 
 
-  void reset(){
-    liczba_aktualna=0;
+  void reset(int aktualna){
+    liczba_aktualna=aktualna;
 
   }
 

@@ -34,9 +34,12 @@ class _Screen_graState extends State<Screen_gra> {
                  onPressed: () {
                    Navigator.pop(context); // Zamknięcie dialogu
                    widget.switchScreen();// Przejście do innej strony/ekranu
-                   widget.gra33.koniec();
+                   setState(() {
+                     widget.gra33.koniec();
+                   });
+
                  },
-                 child: Text("Zamknij"),
+                 child: Text("zagraj nową grę"),
                ),
              ],
            );
