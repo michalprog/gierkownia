@@ -34,7 +34,7 @@ class Bot_33{
     }
   }
   void bot_latwy() {
-    int dodawana=Random().nextInt(3);
+    int dodawana=Random().nextInt(3)+1;
     print (dodawana);
     liczba_aktualna+=dodawana;
 
@@ -81,8 +81,6 @@ class Bot_33{
 
 
   void reset(){
-    typ=0;
-    liczba_koncowa=0;
     liczba_aktualna=0;
 
   }

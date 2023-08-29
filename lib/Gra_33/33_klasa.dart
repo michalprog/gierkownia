@@ -33,16 +33,22 @@ class Klasa33 {
   }
 
   void koniec() {
-    game_type = 0;
     Actual_Number = 0;
     is_started = false;
     bot.reset();
+    gmt=game_type;
   }
 
   void ruch_gracza(int num) {
     if (Actual_Number + num > Final_Number) {
     } else if (Actual_Number + num == Final_Number) {
-      Actual_Number = bot.Ruch(num);
+
+      Actual_Number=Final_Number;
+      if (gmt==1){
+        gmt=4;
+      }else if(gmt==2){
+        gmt=5;
+      }
     } else {
       if (game_type == 0) {
         Actual_Number = bot.Ruch(num);
@@ -52,7 +58,9 @@ class Klasa33 {
           gmt=0;
         }
       } else if (game_type == 1 || game_type == 2) {
-        Actual_Number = bot.Ruch(num);
+
+          Actual_Number = bot.Ruch(num);
+
 
       }
     }

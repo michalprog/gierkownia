@@ -23,7 +23,6 @@ class _Screen_graState extends State<Screen_gra> {
     setState(() {
       widget.gra33.ruch_gracza(liczba);
       if (widget.liczbakoncowa==widget.gra33.Actual_Number){
-       widget.gra33.koniec();
        showDialog(
          context: context,
          builder: (BuildContext context) {
@@ -34,7 +33,8 @@ class _Screen_graState extends State<Screen_gra> {
                TextButton(
                  onPressed: () {
                    Navigator.pop(context); // Zamknięcie dialogu
-                   widget.switchScreen(); // Przejście do innej strony/ekranu
+                   widget.switchScreen();// Przejście do innej strony/ekranu
+                   widget.gra33.koniec();
                  },
                  child: Text("Zamknij"),
                ),
@@ -42,6 +42,7 @@ class _Screen_graState extends State<Screen_gra> {
            );
          },
        );
+
       }
     });
 
