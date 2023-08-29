@@ -12,6 +12,8 @@ class Bot_33{
 
   }
   int Ruch(int aktualna) {
+    //print("jestem tu");
+
     liczba_aktualna += aktualna;
     if (typ==1||typ==2) {
 
@@ -33,7 +35,6 @@ class Bot_33{
   }
   void bot_latwy() {
     int dodawana=Random().nextInt(3);
-    print("jestem tu");
     print (dodawana);
     liczba_aktualna+=dodawana;
 

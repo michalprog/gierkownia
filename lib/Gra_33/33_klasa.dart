@@ -29,7 +29,7 @@ class Klasa33 {
     }
     this.game_type = typGry;
     is_started = true;
-    bot.typ=typGry;
+    bot.wprowadz_dane(Final_Number, game_type);
   }
 
   void koniec() {
@@ -44,8 +44,8 @@ class Klasa33 {
     } else if (Actual_Number + num == Final_Number) {
       Actual_Number = bot.Ruch(num);
     } else {
-      Actual_Number = bot.Ruch(num);
       if (game_type == 0) {
+        Actual_Number = bot.Ruch(num);
         if(gmt==0){
           gmt=3;
         }else{
