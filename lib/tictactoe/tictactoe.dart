@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 class KoloKrzyzyk extends StatefulWidget {
+
   const KoloKrzyzyk({Key? key}) : super(key: key);
 
   @override
@@ -7,8 +8,19 @@ class KoloKrzyzyk extends StatefulWidget {
 }
 
 class _KoloKrzyzykState extends State<KoloKrzyzyk> {
+  String nazwa_gry="kółko i krzyżyk";
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child:Text("kółko i krzyżyk")),
+      ),
+      body:ListView(
+        children: [
+
+        ],
+
+      ),
+    );
   }
 }

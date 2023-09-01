@@ -15,41 +15,38 @@ class Screen_gra extends StatefulWidget {
 
   @override
   State<Screen_gra> createState() => _Screen_graState();
-
 }
 
 class _Screen_graState extends State<Screen_gra> {
-  void ruch(int liczba){
+  void ruch(int liczba) {
     setState(() {
       widget.gra33.ruch_gracza(liczba);
-      if (widget.liczbakoncowa==widget.gra33.Actual_Number){
-       showDialog(
-         context: context,
-         builder: (BuildContext context) {
-           return AlertDialog(
-             title: Text("Koniec gry"),
-             content: Text(widget.gra33.wynik_okienko()),
-             actions: [
-               TextButton(
-                 onPressed: () {
-                   Navigator.pop(context); // Zamknięcie dialogu
-                   widget.switchScreen();// Przejście do innej strony/ekranu
-                   setState(() {
-                     widget.gra33.koniec();
-                   });
-
-                 },
-                 child: Text("zagraj nową grę"),
-               ),
-             ],
-           );
-         },
-       );
-
+      if (widget.liczbakoncowa == widget.gra33.Actual_Number) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Koniec gry"),
+              content: Text(widget.gra33.wynik_okienko()),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context); // Zamknięcie dialogu
+                    widget.switchScreen(); // Przejście do innej strony/ekranu
+                    setState(() {
+                      widget.gra33.koniec();
+                    });
+                  },
+                  child: Text("zagraj nową grę"),
+                ),
+              ],
+            );
+          },
+        );
       }
     });
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -59,8 +56,8 @@ class _Screen_graState extends State<Screen_gra> {
         width: 200,
         color: Colors.yellowAccent,
         alignment: Alignment.center,
-        child:
-            Text(widget.gra33.tpGry[widget.gra33.gmt], style: TextStyle(fontSize: 24)),
+        child: Text(widget.gra33.tpGry[widget.gra33.gmt],
+            style: TextStyle(fontSize: 24)),
       ),
       const SizedBox(
         height: 120,
@@ -71,33 +68,40 @@ class _Screen_graState extends State<Screen_gra> {
         alignment: Alignment.center,
         child: Text(widget.gra33.wyswietl_liczbe().toString()),
       ),
-          Expanded(
-          child:SizedBox(
-            height: double.infinity,
-          ),),
-          Container(
-            height: 200,
-            alignment: Alignment.bottomCenter,
-            child:Row(
-              children: [
-                Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {ruch(1);},
-                      child: const Text("+1", style: TextStyle(fontSize: 20))),
-                ),
-                Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {ruch(2);},
-                      child: const Text("+2", style: TextStyle(fontSize: 20))),
-                ),
-                Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {ruch(3);},
-                      child: const Text("+3", style: TextStyle(fontSize: 20))),
-                ),
-              ],
+      Expanded(
+        child: SizedBox(
+          height: double.infinity,
+        ),
+      ),
+      Container(
+        height: 200,
+        alignment: Alignment.bottomCenter,
+        child: Row(
+          children: [
+            Expanded(
+              child: ElevatedButton(
+                  onPressed: () {
+                    ruch(1);
+                  },
+                  child: const Text("+1", style: TextStyle(fontSize: 20))),
             ),
-          ),
+            Expanded(
+              child: ElevatedButton(
+                  onPressed: () {
+                    ruch(2);
+                  },
+                  child: const Text("+2", style: TextStyle(fontSize: 20))),
+            ),
+            Expanded(
+              child: ElevatedButton(
+                  onPressed: () {
+                    ruch(3);
+                  },
+                  child: const Text("+3", style: TextStyle(fontSize: 20))),
+            ),
+          ],
+        ),
+      ),
     ]));
   }
 }

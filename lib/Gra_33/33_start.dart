@@ -11,7 +11,9 @@ class Start_33 extends StatefulWidget {
 }
 
 class _Start_33State extends State<Start_33> {
-  TextEditingController gameNumber = TextEditingController();
+  late TextEditingController gameNumber = TextEditingController();
+
+
   @override
   void dispose() {
     gameNumber.dispose();
