@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gierkownia/tictactoe/widget_tictactoe.dart';
 class KoloKrzyzyk extends StatefulWidget {
 
   const KoloKrzyzyk({Key? key}) : super(key: key);
@@ -17,6 +18,10 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
       ),
       body:ListView(
         children: [
+          Window_Tictactoe(
+            tekst: "X",
+
+          ),
 
         ],
 
