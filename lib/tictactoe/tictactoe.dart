@@ -21,14 +21,59 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
       body: ListView(
         children: [
           Container(
+
               height: 600,
               width: 600,
               child: GridView.count(
                 crossAxisCount: 3,
-                children: [],
+                children: [
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(0),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(1),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(2),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(3),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(4),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(5),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(6),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(7),
+                  ),
+                  Window_Tictactoe(
+                    tapaction: tapaction,
+                    tekst: TicTactoegame.get_position(8),
+                  ),
+
+                ],
               )),
         ],
       ),
     );
+  }
+  void tapaction(){
+    setState(() {
+      print("dzialam");
+
+    });
   }
 }

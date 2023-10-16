@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Window_Tictactoe extends StatelessWidget {
  final String tekst;
-  const Window_Tictactoe({Key? key, this.tekst = " ", }) : super(key: key);
+ final VoidCallback tapaction;
+  const Window_Tictactoe({Key? key, this.tekst = " ",required this.tapaction }) : super(key: key);
 
 
   @override
@@ -10,11 +12,13 @@ class Window_Tictactoe extends StatelessWidget {
 
     return GestureDetector(
       onTap: (){
-
+tapaction();
       },
       child: Container(
-        width: 200,
-        height: 200,
+        alignment: Alignment.center,
+        color: Colors.lightBlueAccent,
+        width: 100,
+        height: 100,
         child:Text(tekst),
 
 
