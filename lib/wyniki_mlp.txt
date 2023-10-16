@@ -1,0 +1,85 @@
+
+Learning Rate: 0.001, Hidden Layers: (64,), Max Iter: 100
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99        88
+           1       0.92      0.90      0.91        91
+           2       0.96      0.94      0.95        86
+           3       0.94      0.84      0.88        91
+           4       0.94      0.92      0.93        92
+           5       0.91      0.93      0.92        91
+           6       0.96      0.98      0.97        91
+           7       0.98      0.96      0.97        89
+           8       0.88      0.85      0.87        88
+           9       0.79      0.93      0.86        92
+
+    accuracy                           0.92       899
+   macro avg       0.93      0.92      0.93       899
+weighted avg       0.93      0.92      0.92       899
+
+Accuracy: 0.9243604004449388
+
+Learning Rate: 0.004, Hidden Layers: (64,), Max Iter: 250
+Classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99        88
+           1       0.90      0.89      0.90        91
+           2       0.98      0.98      0.98        86
+           3       0.96      0.81      0.88        91
+           4       0.94      0.89      0.92        92
+           5       0.91      0.95      0.93        91
+           6       0.93      0.99      0.96        91
+           7       0.94      0.94      0.94        89
+           8       0.90      0.84      0.87        88
+           9       0.79      0.95      0.86        92
+
+    accuracy                           0.92       899
+   macro avg       0.93      0.92      0.92       899
+weighted avg       0.93      0.92      0.92       899
+
+Accuracy: 0.9221357063403782
+
+
+
+Learning Rate: 0.05, Hidden Layers: (64, 128), Max Iter: 200
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.61      0.75      0.67        88
+           1       0.71      0.48      0.58        91
+           2       0.44      0.99      0.61        86
+           3       0.40      0.53      0.45        91
+           4       0.95      0.91      0.93        92
+           5       0.00      0.00      0.00        91
+           6       0.82      0.97      0.89        91
+           7       0.98      0.92      0.95        89
+           8       0.53      0.31      0.39        88
+           9       0.87      0.83      0.85        92
+
+    accuracy                           0.67       899
+   macro avg       0.63      0.67      0.63       899
+weighted avg       0.63      0.67      0.63       899
+
+Accuracy: 0.6674082313681868
+Learning Rate: 0.002, Hidden Layers: (32,), Max Iter: 200
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.97        88
+           1       0.94      0.85      0.89        91
+           2       0.91      0.94      0.93        86
+           3       0.93      0.90      0.92        91
+           4       0.98      0.91      0.94        92
+           5       0.91      0.92      0.92        91
+           6       0.94      0.99      0.96        91
+           7       0.97      0.96      0.96        89
+           8       0.89      0.82      0.85        88
+           9       0.80      0.93      0.86        92
+
+    accuracy                           0.92       899
+   macro avg       0.92      0.92      0.92       899
+weighted avg       0.92      0.92      0.92       899
+
+Accuracy: 0.9199110122358176

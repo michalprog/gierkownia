@@ -18,12 +18,7 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
       ),
       body:ListView(
         children: [
-          Window_Tictactoe(
-            tekst: "X",
-
-          ),
-
-        ],
+          ],
 
       ),
     );

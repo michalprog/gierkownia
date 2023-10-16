@@ -10,7 +10,7 @@ class Window_Tictactoe extends StatelessWidget {
     return Container(
       width: 200,
       height: 200,
-      child:Text(tekst)
+      child:Text(tekst),
 
 
     );
