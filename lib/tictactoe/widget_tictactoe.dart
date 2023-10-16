@@ -7,12 +7,18 @@ class Window_Tictactoe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 200,
-      child:Text(tekst),
+
+    return GestureDetector(
+      onTap: (){
+
+      },
+      child: Container(
+        width: 200,
+        height: 200,
+        child:Text(tekst),
 
 
+      ),
     );
   }
 }

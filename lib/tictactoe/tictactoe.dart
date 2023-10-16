@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gierkownia/tictactoe/widget_tictactoe.dart';
-class KoloKrzyzyk extends StatefulWidget {
+import 'package:gierkownia/tictactoe/klasa_gry.dart';
 
+class KoloKrzyzyk extends StatefulWidget {
   const KoloKrzyzyk({Key? key}) : super(key: key);
 
   @override
@@ -9,17 +10,24 @@ class KoloKrzyzyk extends StatefulWidget {
 }
 
 class _KoloKrzyzykState extends State<KoloKrzyzyk> {
-  String nazwa_gry="kółko i krzyżyk";
+  String nazwa_gry = "kółko i krzyżyk";
+  TicTacToeClass TicTactoegame = new TicTacToeClass();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child:Text("kółko i krzyżyk")),
+        title: const Center(child: Text("kółko i krzyżyk")),
       ),
-      body:ListView(
+      body: ListView(
         children: [
-          ],
-
+          Container(
+              height: 600,
+              width: 600,
+              child: GridView.count(
+                crossAxisCount: 3,
+                children: [],
+              )),
+        ],
       ),
     );
   }

@@ -27,6 +27,10 @@ class TicTacToeClass{
       return -1;
     }
   }
+  List<int> get positions{
+    return position;
+  }
+
 
 
 
