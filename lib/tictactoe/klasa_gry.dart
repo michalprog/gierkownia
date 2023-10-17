@@ -47,6 +47,9 @@ void move(int pos){
     if(game_started){
       write_position(pos);
           if (game_type==1){
+            if(isgameended()!=0){
+
+            }
 
           }
 
