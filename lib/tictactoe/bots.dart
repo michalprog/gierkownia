@@ -13,13 +13,18 @@ List<int> pozycje=[];
   }
   void bt_latwy(){
     int wylosowana=Random().nextInt(pozycje.length);
+
     while(pozycje[wylosowana]==0){
+      wylosowana=Random().nextInt(pozycje.length);
 
 
     }
+    pozycje[wylosowana]=2;
 
   }
+void bt_trudny(){
 
+}
 
 
 
