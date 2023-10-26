@@ -66,6 +66,16 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
 
                 ],
               )),
+
+         Container(
+           child: Row(
+             children: [
+               ElevatedButton(onPressed: (){startgame(1);}, child: Text("1 vs 1")),
+               ElevatedButton(onPressed: (){startgame(2);}, child: Text("bot łatwy")),
+               ElevatedButton(onPressed: (){startgame(3);}, child: Text("bot trudny")),
+             ],
+           ),
+         )
         ],
       ),
     );
@@ -75,5 +85,8 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
       print("dzialam");
 
     });
+  }
+  void startgame(int rodzaj){
+    TicTactoegame.newgame(rodzaj);
   }
 }
