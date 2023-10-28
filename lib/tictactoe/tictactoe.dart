@@ -28,39 +28,39 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
                 crossAxisCount: 3,
                 children: [
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(0),
                     tekst: TicTactoegame.get_position(0),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(1),
                     tekst: TicTactoegame.get_position(1),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(2),
                     tekst: TicTactoegame.get_position(2),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(3),
                     tekst: TicTactoegame.get_position(3),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(4),
                     tekst: TicTactoegame.get_position(4),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(5),
                     tekst: TicTactoegame.get_position(5),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(6),
                     tekst: TicTactoegame.get_position(6),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(7),
                     tekst: TicTactoegame.get_position(7),
                   ),
                   Window_Tictactoe(
-                    tapaction: tapaction,
+                    tapaction: ()=>tapaction(8),
                     tekst: TicTactoegame.get_position(8),
                   ),
 
@@ -71,7 +71,9 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
            child: Row(
              children: [
                ElevatedButton(onPressed: (){startgame(1);}, child: Text("1 vs 1")),
+               Spacer(),
                ElevatedButton(onPressed: (){startgame(2);}, child: Text("bot łatwy")),
+               Spacer(),
                ElevatedButton(onPressed: (){startgame(3);}, child: Text("bot trudny")),
              ],
            ),
@@ -80,13 +82,18 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
       ),
     );
   }
-  void tapaction(){
-    setState(() {
-      print("dzialam");
-
-    });
+  void tapaction(int position){
+    if(TicTactoegame.game_started) {
+      setState(() {
+        print("dzialam");
+      });
+    }
   }
   void startgame(int rodzaj){
-    TicTactoegame.newgame(rodzaj);
+
+      setState(() {
+        TicTactoegame.newgame(rodzaj);
+      });
+
   }
 }

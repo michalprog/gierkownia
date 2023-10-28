@@ -16,12 +16,15 @@ tapaction();
       },
       child: Container(
         alignment: Alignment.center,
-        color: Colors.lightBlueAccent,
         width: 100,
         height: 100,
         padding: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+            color: Colors.lightBlueAccent,
+            border: Border.all(color: Colors.blueAccent)
+        ),
 
-        
+
         child:Text(tekst),
 
 
