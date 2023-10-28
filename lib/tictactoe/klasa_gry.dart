@@ -45,24 +45,10 @@ class TicTacToeClass{
   }
 void move(int pos){
     if(game_started){
-      write_position(pos);
-          if (game_type==1){
-            if(isgameended()!=0){
-              if(who_plays==1){
-                position[pos]=1;
-                who_plays=2;
+      if(game_type==1) {
+        write_position(pos);
+      }
 
-              }else{
-                position[pos]=2;
-                who_plays=1;
-
-              }
-
-            }else{
-
-            }
-
-          }
 
     }
 
@@ -70,6 +56,7 @@ void move(int pos){
 bool write_position(int pos){
     if(position[pos]==0){
       position[pos]=who_plays;
+      who_plays==1?who_plays=2:who_plays=1;
       return true;
     }else{
       return false;
