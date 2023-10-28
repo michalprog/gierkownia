@@ -85,6 +85,7 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
   void tapaction(int position){
     if(TicTactoegame.game_started) {
       setState(() {
+        TicTactoegame.move(position);
         print("dzialam");
       });
     }

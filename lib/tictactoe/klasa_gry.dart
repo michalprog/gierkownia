@@ -48,7 +48,17 @@ void move(int pos){
       write_position(pos);
           if (game_type==1){
             if(isgameended()!=0){
+              if(who_plays==1){
+                position[pos]=1;
+                who_plays=2;
 
+              }else{
+                position[pos]=2;
+                who_plays=1;
+
+              }
+
+            }else{
 
             }
 
