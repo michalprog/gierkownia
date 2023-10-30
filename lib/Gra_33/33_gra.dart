@@ -20,7 +20,7 @@ class Screen_gra extends StatefulWidget {
 class _Screen_graState extends State<Screen_gra> {
   void ruch(int liczba) {
     setState(() {
-      widget.gra33.ruch_gracza(liczba);
+
       if (widget.liczbakoncowa == widget.gra33.Actual_Number) {
         showDialog(
           context: context,
