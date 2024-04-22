@@ -4,7 +4,7 @@ import 'package:gierkownia/warcaby/Warcaby_Screen.dart';
 import 'package:gierkownia/tictactoe/tictactoe.dart';
 import 'package:gierkownia/szachy/Szachy_screen.dart';
 
-
+import 'Widgets/Button_Widget.dart';
 
 class Glowna extends StatelessWidget {
   const Glowna({Key? key}) : super(key: key);
@@ -12,114 +12,41 @@ class Glowna extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: const Center(child: Text("gierkownia")),
+          backgroundColor: Colors.greenAccent,
         ),
         body: Center(
             child: Column(
-              children: [
-                const SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Gra33()),
-                      );
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            const ButtonWidget(
+              text: 'Gra 33',
+              targetWidget: Gra33(),
+            ),
+            const ButtonWidget(
+              text: 'kólko i krzyżyk',
+              targetWidget: KoloKrzyzyk(),
+            ),
+            const ButtonWidget(
+              text: 'warcaby',
+              targetWidget: WarcabyScreen(),
+            ),
+            const ButtonWidget(
+              text: 'Szachy',
+              targetWidget: SzachyScreen(),
+            ),
 
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: const Text(
-                      "Gra 33",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const KoloKrzyzyk()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: const Text(
-                      "kólko i krzyżyk",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: () {  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const WarcabyScreen()),
-                    );},
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: const Text(
-                      "warcaby",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const SzachyScreen()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: const Text(
-                      "Szachy",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 80,
-                ),
-                const Center(
-                    child: Text("twórca: Michał Chojnacki",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color:Colors.deepPurple
-
-                        ))),
-              ],
-            )));
+            const SizedBox(
+              height: 80,
+            ),
+            const Center(
+                child: Text("twórca: Michał Chojnacki",
+                    style: TextStyle(fontSize: 20, color: Colors.deepPurple))),
+          ],
+        )));
   }
 }
