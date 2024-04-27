@@ -27,39 +27,39 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
               child: GridView.count(
                 crossAxisCount: 3,
                 children: [
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(0),
                     tekst: TicTactoegame.get_position(0),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(1),
                     tekst: TicTactoegame.get_position(1),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(2),
                     tekst: TicTactoegame.get_position(2),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(3),
                     tekst: TicTactoegame.get_position(3),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(4),
                     tekst: TicTactoegame.get_position(4),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(5),
                     tekst: TicTactoegame.get_position(5),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(6),
                     tekst: TicTactoegame.get_position(6),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(7),
                     tekst: TicTactoegame.get_position(7),
                   ),
-                  Window_Tictactoe(
+                  WindowTictactoe(
                     tapaction: ()=>tapaction(8),
                     tekst: TicTactoegame.get_position(8),
                   ),

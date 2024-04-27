@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gierkownia/Gra_33/33_klasa.dart';
 
-class Screen_gra extends StatefulWidget {
+class ScreenGame extends StatefulWidget {
   final Klasa33 gra33;
   final VoidCallback switchScreen;
   final int liczbakoncowa, typgry;
-  Screen_gra({
+  ScreenGame({
     Key? key,
     required this.switchScreen,
     required this.liczbakoncowa,
@@ -14,10 +14,10 @@ class Screen_gra extends StatefulWidget {
         super(key: key);
 
   @override
-  State<Screen_gra> createState() => _Screen_graState();
+  State<ScreenGame> createState() => _ScreenGameState();
 }
 
-class _Screen_graState extends State<Screen_gra> {
+class _ScreenGameState extends State<ScreenGame> {
   void ruch(int liczba) {
     setState(() {
 

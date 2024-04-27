@@ -6,7 +6,6 @@ class ButtonWidget extends StatelessWidget {
   const ButtonWidget({Key? key, required this.text, required this.targetWidget}): super(key: key) ;
 final Widget targetWidget;
   final String text;
-
   @override
   Widget build(BuildContext context) {
     return Container(

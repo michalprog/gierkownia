@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Window_Tictactoe extends StatelessWidget {
+class WindowTictactoe extends StatelessWidget {
  final String tekst;
  final VoidCallback tapaction;
-  const Window_Tictactoe({Key? key, this.tekst = " ",required this.tapaction }) : super(key: key);
+  const WindowTictactoe({Key? key, this.tekst = " ",required this.tapaction }) : super(key: key);
 
 
   @override

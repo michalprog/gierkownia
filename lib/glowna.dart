@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:io';
 import 'package:gierkownia/Gra_33/33.dart';
 import 'package:gierkownia/warcaby/Warcaby_Screen.dart';
 import 'package:gierkownia/tictactoe/tictactoe.dart';
@@ -17,7 +19,7 @@ class Glowna extends StatelessWidget {
           title: const Center(child: Text("gierkownia")),
           backgroundColor: Colors.greenAccent,
         ),
-        body: Center(
+        body:  Center(
             child: Column(
           children: [
             const SizedBox(
@@ -39,7 +41,25 @@ class Glowna extends StatelessWidget {
               text: 'Szachy',
               targetWidget: SzachyScreen(),
             ),
-
+            Container(
+              width: 300,
+              padding: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                onPressed: (){
+                  exit(0);
+                 },
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child:  const Text(
+                  "Opuść Aplikacje",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 80,
             ),

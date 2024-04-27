@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gierkownia/Gra_33/bot_33.dart';
+import 'package:gierkownia/Gra_33/bot33.dart';
 import 'dart:math';
 
 class Klasa33 {
@@ -8,7 +8,7 @@ class Klasa33 {
   int Final_Number = 33; //final
   int Actual_Number = 0;
   bool is_started = false;
-  Bot_33 bot = new Bot_33();
+  Bot33 bot = new Bot33();
   List<String> tpGry = [
     "1 vs 1 (gracz X)",
     "bot(łatwy)",

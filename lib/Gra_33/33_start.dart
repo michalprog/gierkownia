@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Start_33 extends StatefulWidget {
+class Start33 extends StatefulWidget {
   final void Function(int,int) switchScreen;
-  const Start_33({Key? key,required this.switchScreen}) : super(key: key);
+  const Start33({Key? key,required this.switchScreen}) : super(key: key);
 
   @override
-  State<Start_33> createState() => _Start_33State();
+  State<Start33> createState() => _Start33State();
 }
 
-class _Start_33State extends State<Start_33> {
+class _Start33State extends State<Start33> {
   late TextEditingController gameNumber = TextEditingController();
 
 

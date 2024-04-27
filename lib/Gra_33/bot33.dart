@@ -1,6 +1,6 @@
 import 'dart:math';
 
-class Bot_33{
+class Bot33{
   int typ=0;
   int liczba_koncowa=0;
   int liczba_aktualna=0;

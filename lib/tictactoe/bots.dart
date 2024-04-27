@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
-class bots{
+class Bots{
 List<int> pozycje=[];
   List<int> bot_latwy(List<int>poz){
     pozycje=poz;
