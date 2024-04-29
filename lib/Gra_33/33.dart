@@ -33,8 +33,10 @@ class _Gra33State extends State<Gra33> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         title: const Center(child: Text("Gra 33")),
+        backgroundColor: Colors.greenAccent,
       ),
       body: glowny,
 

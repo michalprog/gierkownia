@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,7 +11,7 @@ class Start33 extends StatefulWidget {
 }
 
 class _Start33State extends State<Start33> {
-  late TextEditingController gameNumber = TextEditingController();
+   final TextEditingController gameNumber = TextEditingController();
 
 
   @override
@@ -21,7 +21,12 @@ class _Start33State extends State<Start33> {
   }
   void zmien_okno(int type){
     setState(() {
+      print(gameNumber.text);
       int liczba = int.tryParse(gameNumber.text) ?? 33;
+      if(liczba<33)
+        {
+liczba=33;
+        }
       print (liczba);
       widget.switchScreen(type,liczba);
     });
@@ -92,8 +97,7 @@ class _Start33State extends State<Start33> {
           padding: const EdgeInsets.all(5),
         child:TextFormField(
           decoration: const InputDecoration(labelText: 'podaj liczbę z zakresu 33-100'),
-          //controller: gameNumber,
-          initialValue: '33',
+          controller: gameNumber,
           keyboardType: TextInputType.number,
           inputFormatters: [
             FilteringTextInputFormatter.allow(RegExp(r'^[1-9][0-9]?$|100$'),),
