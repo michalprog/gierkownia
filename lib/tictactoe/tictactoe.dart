@@ -12,6 +12,7 @@ class KoloKrzyzyk extends StatefulWidget {
 class _KoloKrzyzykState extends State<KoloKrzyzyk> {
   String nazwa_gry = "kółko i krzyżyk";
   TicTacToeClass TicTactoegame = new TicTacToeClass();
+  int Index=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +67,7 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
 
                 ],
               )),
-
+Spacer(),
          Container(
            child: Row(
              children: [
@@ -77,9 +78,11 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
                ElevatedButton(onPressed: (){startgame(3);}, child: Text("bot trudny")),
              ],
            ),
+
          )
         ],
       ),
+
     );
   }
   void tapaction(int position){
