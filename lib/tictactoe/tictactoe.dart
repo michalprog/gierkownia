@@ -81,7 +81,7 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
                 ],
               )),
           Spacer(),
-          Container(
+          /*Container(
             child: Row(
               children: [
                 ElevatedButton(
@@ -103,7 +103,7 @@ class _KoloKrzyzykState extends State<KoloKrzyzyk> {
                     child: Text("bot trudny")),
               ],
             ),
-          )
+          )*/
         ],
       ),
     );
