@@ -9,6 +9,6 @@ class WarcabyScreen extends StatefulWidget {
 class _WarcabyScreenState extends State<WarcabyScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
